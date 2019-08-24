@@ -1,0 +1,5 @@
+name,type,price,shipping,upc,description,manufacturer,model,url,image
+Demo2,type2,1,1234567,abc,Demo description 2,manufacturer2,model2,url,image
+Demo3,type3,2,1234568,abc,Demo description 3,manufacturer3,model3,url,image
+Demo4,type4,3,1234569,abc,Demo description 4,manufacturer4,model4,url,image
+

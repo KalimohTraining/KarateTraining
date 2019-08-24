@@ -9,10 +9,12 @@ function() {
 	myVarName: 'someValue'
   }
   if (env == 'dev') {
-    // customize
-    // e.g. config.foo = 'bar';
+    karate.configure('connectTimeout', 20000);
+     karate.configure('readTimeout', 20000);
   } else if (env == 'e2e') {
     // customize
   }
-  return config;
+  karate.configure('connectTimeout', 30000);
+  karate.configure('readTimeout', 30000);
+    return config;
 }
