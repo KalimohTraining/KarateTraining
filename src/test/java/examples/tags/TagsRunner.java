@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Karate.class)
 
-@KarateOptions(tags = {"@spanish=Funcional"})
+@KarateOptions(tags = {"@region=GB"})
 
 public class TagsRunner {
 

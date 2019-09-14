@@ -35,3 +35,9 @@ karate.log
 #target folders
 */target/*
 target/
+#reports folders
+*/karateOutputPath/*
+karateOutputPath/
+
+#Other
+Test Results - TagsRunner.html
