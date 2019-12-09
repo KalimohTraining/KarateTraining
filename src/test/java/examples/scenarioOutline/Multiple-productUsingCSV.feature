@@ -2,7 +2,7 @@ Feature: scenario outline using a dynamic table
   from a csv file
   Background:
     * url 'http://192.168.1.102:3030'
-
+  @ignore
   Scenario Outline: product name: <name>
     Given path '/products'
     * request {name:<name>, type:<type>,price:<price>, shipping:<shipping>,upc:<upc>,description:<description>, manufacturer:<manufacturer>,model:<model>, url:<url>, image:<image> }
