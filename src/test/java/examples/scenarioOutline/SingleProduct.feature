@@ -2,7 +2,7 @@ Feature: add product and verify it
 
   Background:
     * url 'http://192.168.1.105:3030'
-
+  @ignore
   Scenario Outline: create Single products and verify their id and name
     Given path '/products'
     And request {name:<name>, type:<type>,price:<price>, shipping:<shipping>,upc:<upc>,description:<description>, manufacturer:<manufacturer>,model:<model>, url:<url>, image:<image> }

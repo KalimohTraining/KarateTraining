@@ -2,6 +2,8 @@ package examples;
 
 
 import com.intuit.karate.KarateOptions;
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
 import com.intuit.karate.cucumber.CucumberRunner;
 import com.intuit.karate.cucumber.KarateStats;
 import net.masterthought.cucumber.Configuration;
@@ -21,18 +23,19 @@ import static org.junit.Assert.assertTrue;
 public class JUnit4parallelRunner {
 
     @Test
-    public void testParallel() {
+    public void testParallel(){
         String karateOutputPath = "target/surefire-reports";
-        KarateStats stats = CucumberRunner.parallel(getClass(), 3, karateOutputPath);
-        generateReport(karateOutputPath);
-        assertTrue("there are scenario failures", stats.getFailCount() == 0);
+        Results results = Runner.parallel(getClass(),3,karateOutputPath);
+        generateReport(results.getReportDir());
+        assertTrue(results.getErrorMessages(),results.getFailCount()==0);
     }
 
-    private static void generateReport(String karateOutputPath) {
+    public static void generateReport(String karateOutputPath) {
         Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] {"json"}, true);
         List<String> jsonPaths = new ArrayList(jsonFiles.size());
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("target"), "demo");
+        Configuration config = new Configuration(new File("target"), "Karatetraining");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
-    }}
+    }
+}
