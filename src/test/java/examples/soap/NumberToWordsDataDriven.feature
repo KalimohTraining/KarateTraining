@@ -17,7 +17,7 @@ Given request
 </soap:Envelope>
 """
 
-When soap action 'test 1234'
+When soap action 'Conversion'
 Then status 200
 
 * print '\n', response
