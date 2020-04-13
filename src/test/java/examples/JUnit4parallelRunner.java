@@ -4,8 +4,8 @@ package examples;
 import com.intuit.karate.KarateOptions;
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
-import com.intuit.karate.cucumber.CucumberRunner;
-import com.intuit.karate.cucumber.KarateStats;
+//import com.intuit.karate.cucumber.CucumberRunner; --cucumber.api has been deprecated
+//import com.intuit.karate.cucumber.KarateStats; --cucumber.api has been deprecated
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.commons.io.FileUtils;
