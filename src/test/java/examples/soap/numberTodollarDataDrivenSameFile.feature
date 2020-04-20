@@ -24,7 +24,8 @@ Feature:Sample karate test script for a soap service
     * print '\nConverted $ value is: ', temp
 
     Examples:
-    |num|expected|
-    |10 |'ten dollars'|
-    |20 |'twenty dollars'|
-    |50 |'fifty dollars'|
+      |read('numberToDollar.csv')|
+#    |num|expected|
+#    |10 |'ten dollars'|
+#    |20 |'twenty dollars'|
+#    |50 |'fifty dollars'|
