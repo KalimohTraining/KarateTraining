@@ -16,9 +16,11 @@ Feature:Sample karate test script for a soap service
       </soap:Envelope>
     """
     When soap action 'Conversion'
+    # http://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL check that soap action is balnk so any value can be passed.
     Then status 200
     * print '\n', response
     * match response /Envelope/Body/NumberToDollarsResponse/NumberToDollarsResult == 'ten dollars'
     # To print the converted value to console
     * def temp = /Envelope/Body/NumberToDollarsResponse/NumberToDollarsResult
     * print '\nConverted $ value is: ', temp
+    
